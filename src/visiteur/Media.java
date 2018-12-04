@@ -14,4 +14,5 @@ public abstract class Media {
 
     abstract int accept(Visiteur v);
 
+    abstract String getNomPourArticle(Visiteur v,String askedAuthor);
 }

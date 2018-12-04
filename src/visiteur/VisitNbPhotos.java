@@ -11,7 +11,7 @@ public class VisitNbPhotos implements Visiteur{
    }
 
 
-   public int visitElement(Album a){
+    public int visitElement(Album a){
        for (Media med : a )
            this.S=this.S+med.accept(this);
        return this.S;
@@ -20,4 +20,17 @@ public class VisitNbPhotos implements Visiteur{
    public int getS(){
        return S;
    }
+
+
+    @Override
+    public String visitElementAuthor(Album a) {
+        return null;
+    }
+
+    @Override
+    public String visitElementAuthor(Article a) {
+        return null;
+    }
+
+
 }

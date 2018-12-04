@@ -19,20 +19,22 @@ public class Photo extends Media {
 
     int getNombreArticle() { return 0; }
 
+
     @Override
     String getAuteur() {
-        return this.auteur;
+        return null;
     }
 
     @Override
     String getNom() {
-        return this.nom;
+        return null;
     }
 
     @Override
     String getType() {
         return null;
     }
+
 
     @Override
     public String toString() {

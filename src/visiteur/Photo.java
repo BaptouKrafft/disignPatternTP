@@ -10,13 +10,16 @@ public class Photo extends Media {
         this.nomFichier = nomFichier;
     }
 
-    public int accept(Visiteur v){
+    @Override
+    int accept(Visiteur v) {
         return 1;
     }
 
-    String getAuteur(){
-        return this.auteur;
+    @Override
+    String getNomPourArticle(Visiteur v,String askedAuthor) {
+        return "";
     }
+
 
 
 

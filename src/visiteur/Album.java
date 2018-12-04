@@ -16,8 +16,20 @@ public class Album extends Media implements Iterable<Media>{
     }
 
 
-    public int accept(Visiteur v){
+   // public int accept(Visiteur v){
+     //   return v.visitElement(this);
+    //}
+
+
+    @Override
+    int accept(Visiteur v) {
         return v.visitElement(this);
+    }
+
+    @Override
+    String getNomPourArticle(Visiteur v,String askedAuthor) {
+
+        return v.visitElementAuthor(this);
     }
 
     @Override

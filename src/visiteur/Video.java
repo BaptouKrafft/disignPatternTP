@@ -9,11 +9,15 @@ public class Video extends Media {
         this.nomFichier = nomFichier;
     }
 
-    public int accept(Visiteur v){
+    @Override
+    int accept(Visiteur v) {
         return 0;
     }
 
-
+    @Override
+    String getNomPourArticle(Visiteur v,String askedAuthor) {
+        return "";
+    }
 
     @Override
     public String toString() {

@@ -5,5 +5,10 @@ public interface Visiteur {
 
     public int visitElement(Photo p);
 
+    public String visitElementAuthor(Album a);
+
+    public String visitElementAuthor(Article a);
+
+
 
 }
