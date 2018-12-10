@@ -10,18 +10,17 @@ public class Photo extends Media {
         this.nomFichier = nomFichier;
     }
 
+
+
     @Override
-    int accept(Visiteur v) {
-        return 1;
+    void accept(final Visiteur v) {
+        v.visit(this);
     }
 
     @Override
-    String getNomPourArticle(Visiteur v,String askedAuthor) {
-        return "";
+    String getType() {
+        return "Photo";
     }
-
-
-
 
     @Override
     public String toString() {

@@ -12,7 +12,8 @@ public abstract class Media {
         this.nom = nom;
     }
 
-    abstract int accept(Visiteur v);
+    abstract void accept(Visiteur v);
 
-    abstract String getNomPourArticle(Visiteur v,String askedAuthor);
+    abstract String getType();
+
 }

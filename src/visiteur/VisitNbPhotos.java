@@ -1,36 +1,30 @@
 package visiteur;
 
 public class VisitNbPhotos implements Visiteur{
-    private int S;
+
+    private int Somme;
     VisitNbPhotos(){
-        this.S=0;
+        this.Somme=0;
     }
 
-   public int visitElement(Photo p){
-        return p.accept(this);
-   }
 
-
-    public int visitElement(Album a){
-       for (Media med : a )
-           this.S=this.S+med.accept(this);
-       return this.S;
-   }
-
-   public int getS(){
-       return S;
-   }
-
-
-    @Override
-    public String visitElementAuthor(Album a) {
-        return null;
+    public void visit(Photo p) {
+        this.Somme=this.Somme+1;
     }
 
-    @Override
-    public String visitElementAuthor(Article a) {
-        return null;
+    public int getSomme(){
+        return this.Somme;
     }
 
+    public void visit(Album album) {
+    }
+
+
+    public void visit(Video v) {
+    }
+
+    public void visit(Article a){
+
+    }
 
 }

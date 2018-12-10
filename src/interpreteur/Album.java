@@ -16,6 +16,20 @@ public class Album extends Media implements Iterable<Media>{
             this.als.add(sc);
     }
 
+    public void supprimer(Media m){
+        this.als.remove(m);
+    }
+
+
+    public void supprimerVideoFromAuthor(String author){
+        for (Media m : this.als){
+            if (m.getAuteur()==author && m instanceof Video){
+                supprimer(m);
+            }
+        }
+    }
+
+
     int getNombreDePhoto(){
         int S=0;
         for (Media m : this.als)

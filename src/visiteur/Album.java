@@ -10,26 +10,35 @@ public class Album extends Media implements Iterable<Media>{
         this.als = new ArrayList<>(10);
     }
 
+
+
     public void ajouter(Media... s) {
         for (Media sc : s)
             this.als .add(sc) ;
     }
 
+    public void supprimer(Media media){
 
-   // public int accept(Visiteur v){
-     //   return v.visitElement(this);
-    //}
+        this.als.remove(media);
+
+    }
+
+    void acceptSuppress(final Visiteur v){
+        v.visit(this);
+    }
 
 
     @Override
-    int accept(Visiteur v) {
-        return v.visitElement(this);
+    void accept(final Visiteur v) {
+        for (Media m : this.als){
+            m.accept(v);
+        }
+
     }
 
     @Override
-    String getNomPourArticle(Visiteur v,String askedAuthor) {
-
-        return v.visitElementAuthor(this);
+    String getType() {
+        return "Album";
     }
 
     @Override

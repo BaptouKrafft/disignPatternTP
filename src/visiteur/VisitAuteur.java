@@ -10,29 +10,28 @@ public class VisitAuteur implements Visiteur {
     }
 
     @Override
-    public int visitElement(Album a) {
-        return 0;
+    public void visit(Album a) {
+
     }
 
     @Override
-    public int visitElement(Photo p) {
-        return 0;
+    public void visit(Photo photo) {
+
     }
 
     @Override
-    public String visitElementAuthor(Album a) {
-
-        for (Media m: a){
-            this.listeArticles=this.listeArticles+m.getNomPourArticle(this,askedAuteur);
+    public void visit(Article article) {
+        if (article.getAuteur()==askedAuteur){
+            this.listeArticles=this.listeArticles+" "+article.getNom();
         }
-        return this.listeArticles;
     }
 
     @Override
-    public String visitElementAuthor(Article a) {
+    public void visit(Video video) {
 
-       return null;
     }
+
+
 
     public String getListeArticles(){
         return this.listeArticles;

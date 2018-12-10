@@ -33,4 +33,13 @@ public class Article extends Media {
     String getAuteur(){
         return this.auteur;
     }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "auteur='" + auteur + '\'' +
+                ", annee=" + annee +
+                ", nom='" + nom + '\'' +
+                '}';
+    }
 }

@@ -1,14 +1,15 @@
 package visiteur;
 
 public interface Visiteur {
-    public int visitElement(Album a);
-
-    public int visitElement(Photo p);
-
-    public String visitElementAuthor(Album a);
-
-    public String visitElementAuthor(Article a);
 
 
+
+    public void visit(Album a);
+
+    public void visit(Photo photo);
+
+    public void visit(Article article);
+
+    public void visit(Video video);
 
 }

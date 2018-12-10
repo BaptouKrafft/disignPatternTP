@@ -37,4 +37,13 @@ public class Video extends Media {
         return this.auteur;
     }
 
+    @Override
+    public String toString() {
+        return "Video{" +
+                "auteur='" + auteur + '\'' +
+                ", annee=" + annee +
+                ", nom='" + nom + '\'' +
+                '}';
+    }
+
 }

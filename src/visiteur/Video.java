@@ -3,20 +3,26 @@ package visiteur;
 public class Video extends Media {
     protected String auteur;
     protected String nomFichier;
-    public Video(int d, String nom, String auteur, String nomFichier) {
+    protected String format;
+    public Video(int d, String nom, String auteur, String nomFichier,String format) {
         super(d, nom);
         this.auteur = auteur;
         this.nomFichier = nomFichier;
+        this.format=format;
+
     }
 
     @Override
-    int accept(Visiteur v) {
-        return 0;
+    String getType() {
+        return "Video";
     }
 
-    @Override
-    String getNomPourArticle(Visiteur v,String askedAuthor) {
-        return "";
+    public String getFormat(){
+        return this.format;
+    }
+
+    public String getNom() {
+        return this.nom;
     }
 
     @Override
@@ -27,4 +33,12 @@ public class Video extends Media {
                 ", nom='" + nom + '\'' +
                 '}';
     }
+
+    @Override
+    void accept(final Visiteur v) {
+        v.visit(this);
+    }
+
+
+
 }

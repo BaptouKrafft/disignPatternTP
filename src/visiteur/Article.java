@@ -9,29 +9,23 @@ public class Article extends Media {
         this.nomFichier = nomFichier;
     }
 
-   // public int accept(Visiteur v){
-     //   return 0;
-    //}
+
 
 
     @Override
-    int accept(Visiteur v) {
-        return 0;
+    void accept(Visiteur v) {
+        v.visit(this);
     }
 
     @Override
-    String getNomPourArticle(Visiteur v,String askedAuthor) {
-        if (askedAuthor==this.auteur){
-            return this.nom+" ";
-        }
-        else return "";
-
-
+    String getType() {
+        return "Article";
     }
 
     public String getAuteur() {
         return auteur;
     }
+    public String getNom(){return this.nom;}
 
     @Override
     public String toString() {
