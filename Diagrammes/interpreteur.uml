@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>interpreteur</OriginalElement>
+  <nodes>
+    <node x="391.5" y="0.0">interpreteur.Media</node>
+    <node x="783.0" y="274.0">interpreteur.Album</node>
+    <node x="522.0" y="310.0">interpreteur.Article</node>
+    <node x="0.0" y="639.0">interpreteur.Main</node>
+    <node x="261.0" y="310.0">interpreteur.Photo</node>
+    <node x="0.0" y="298.0">interpreteur.Video</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="interpreteur.Photo" target="interpreteur.Media">
+      <point x="0.0" y="-124.0" />
+      <point x="381.5" y="254.0" />
+      <point x="481.875" y="254.0" />
+      <point x="-30.125" y="112.0" />
+    </edge>
+    <edge source="interpreteur.Video" target="interpreteur.Media">
+      <point x="0.0" y="-136.0" />
+      <point x="120.5" y="244.0" />
+      <point x="421.625" y="244.0" />
+      <point x="-90.375" y="112.0" />
+    </edge>
+    <edge source="interpreteur.Album" target="interpreteur.Media">
+      <point x="0.0" y="-160.0" />
+      <point x="906.0" y="244.0" />
+      <point x="602.375" y="244.0" />
+      <point x="90.375" y="112.0" />
+    </edge>
+    <edge source="interpreteur.Article" target="interpreteur.Media">
+      <point x="0.0" y="-124.0" />
+      <point x="642.5" y="254.0" />
+      <point x="542.125" y="254.0" />
+      <point x="30.125" y="112.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="522.0" y="374.5" />
+  <SelectedNodes>
+    <node>interpreteur.Article</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

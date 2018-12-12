@@ -30,4 +30,17 @@ public class Photo extends Media {
                 ", nom='" + nom + '\'' +
                 '}';
     }
+
+    public String getNom(){
+        return this.nom;
+    }
+
+
+    public String getNomFichier() {
+        return nomFichier;
+    }
+
+    public String getAuteur() {
+        return auteur;
+    }
 }

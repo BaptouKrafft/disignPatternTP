@@ -17,15 +17,6 @@ public class Album extends Media implements Iterable<Media>{
             this.als .add(sc) ;
     }
 
-    public void supprimer(Media media){
-
-        this.als.remove(media);
-
-    }
-
-    void acceptSuppress(final Visiteur v){
-        v.visit(this);
-    }
 
 
     @Override

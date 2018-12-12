@@ -18,6 +18,7 @@ public class Main {
 
         al.ajouter(p1, p2, p3,v1,v2,v3,a1,a2,a3);
 
+        Adaptateur a=new Adaptateur(2015, "premierAdaptateur",p1,"Photo d'une belle aurore boréale d'Antarctique");
 
         VisitNbPhotos photos=new VisitNbPhotos();
         al.accept(photos);
@@ -29,21 +30,15 @@ public class Main {
         VisitMP4 mp4= new VisitMP4();
 
         al.accept(mp4);
-        System.out.println(al.toString());
-        VisitAndSuppress vas=new VisitAndSuppress("NSM");
-        al.acceptSuppress(vas);
-        System.out.println(al.toString());
 
-        System.out.println("Somme "+photos.getSomme());
-        System.out.println("Articles From JPP "+":"+auteurVisiteur.getListeArticles()+":");
-        System.out.println("Video Format mp4"+":"+mp4.getListeMP4()+":");
-        String res = "Album{als=[Photo{auteur='JMP', annee=2018, nom='Aurore Boréale'}, Photo{auteur='JMP', annee=2018, nom='Trek'}, Photo{auteur='SM', annee=2018, nom='Fjord'}, " +
-                "Video{auteur='NSM', annee=2014, nom='Poulet'}, Video{auteur='MSN', annee=1989, nom='Goulag'}, " +
-                "Article{auteur='JPP', annee=1789, nom='Vadrouille'}, Article{auteur='JP2', annee=1665, nom='Crakow'}]}";
-
+        String res = "Album{als=[Photo{auteur='JMP', annee=2018, nom='Aurore Boréale'}, Photo{auteur='JMP', annee=2018, nom='Trek'}, " +
+                "Photo{auteur='SM', annee=2018, nom='Fjord'}, Video{auteur='NSM', annee=2014, nom='Poulet'}, " +
+                "Video{auteur='MSN', annee=1989, nom='Goulag'}, Video{auteur='MSN', annee=1997, nom='Tondeuse'}," +
+                " Article{auteur='MSN', annee=1789, nom='Vadrouille'}, Article{auteur='JP2', annee=1665, nom='Crakow'}," +
+                " Article{auteur='JPP', annee=1789, nom='Vladimir'}]}";
         assert (al.toString().equals(res)) : "Bug" ;
         assert (photos.getSomme()==3) : "NB Photo" ;
-        assert (auteurVisiteur.getListeArticles().equals(" Vadrouille Vladimir")):"articles";
+        assert (auteurVisiteur.getListeArticles().equals(" Vladimir")):"articles";
         assert (mp4.getListeMP4().equals(" Goulag Tondeuse")): "PB format mp4";
 
     }
